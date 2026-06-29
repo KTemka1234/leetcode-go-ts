@@ -1,6 +1,5 @@
 # LeetCode
 
-<!-- Замените <owner>/<repo> на ваш репозиторий после первого пуша на GitHub. -->
 [![CI](https://github.com/KTemka1234/leetcode-go-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/KTemka1234/leetcode-go-ts/actions/workflows/ci.yml)
 
 Решения задач LeetCode на **Go** и **TypeScript**. Каждая задача — отдельная папка
@@ -61,6 +60,26 @@ npm run typecheck        # проверка типов без запуска
 go test ./...                          # все задачи
 go test ./problems/0001-two-sum/       # одна задача
 go test -run TwoSum ./...              # по имени теста
+```
+
+## Быстрый коммит решения
+
+Вместо `git add` / `git commit` / `git push` по отдельности:
+
+```sh
+git save            # add -A + commit (авто-сообщение из задачи) + push
+git save "текст"    # то же, но со своим сообщением
+git save -n         # dry-run: показать сообщение, ничего не коммитить
+```
+
+Без аргумента сообщение генерируется из изменённой папки `problems/<NNNN>-<slug>/`,
+например `solve: 22. Remove Duplicates From Sorted Array`.
+
+Алиас регистрируется один раз (он живёт в `.git/config` и не коммитится, поэтому при
+клонировании на другую машину команду нужно выполнить заново):
+
+```sh
+git config alias.save '!node scripts/commit.mjs'
 ```
 
 ## CI

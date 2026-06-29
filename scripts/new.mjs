@@ -51,8 +51,7 @@ const files = {
 
 // ${pascal} — задача ${Number(rawNumber)}. ${title}
 // ${url}
-//
-// TODO: реализовать решение.
+
 func ${pascal}() {
 }
 `,
@@ -66,8 +65,7 @@ func Test${pascal}(t *testing.T) {
 `,
   "solution.ts": `// ${camel} — задача ${Number(rawNumber)}. ${title}
 // ${url}
-//
-// TODO: реализовать решение.
+
 export function ${camel}(): void {
   // TODO
 }
@@ -85,13 +83,6 @@ describe("${camel}", () => {
 
 **Сложность:** TODO
 
-## Условие
-
-TODO: краткое условие.
-
-## Идея
-
-TODO: описание подхода.
 `,
 };
 
